@@ -24,23 +24,20 @@
     --bs:0.25em 0.25em 0.80em rgba(0,0,0,.5),
     0.125em 0.12em 0.25em rgba(0,0,0,.15); 
 }
-@media  (min-width:600px)
-{
-    :root{
-        --fs-h1:3.5rem;
-        --fs-h2:2,5rem;
-        --fs-h3:1.5rem;
-        --fs-body:1.25rem;
+
+
+@media  only screen and(max-width:480px) and (min-width:1200px){
+
+    body{
+        background-color: #303030;
     }
+    }
+    @media  only screen and(max-width:480px) and (min-width:1200px){
 
-}
-
-@media  only screen and(max-width:600px){
-.box{
-    width:100%;
-}
-}
-
+        .car-image1{
+            background-color: #303030;
+        }
+        }
     
 
 /*style*/
@@ -93,7 +90,7 @@ display:block;
     margin-bottom: 1rem;
 }
 section{ 
-    padding:5em 2em;
+    padding:4em 1em;
 margin-bottom: 0%;
 }
 
@@ -124,8 +121,8 @@ margin-bottom: 0%;
     text-align:right;
     position:relative;
     left:-2em;
-    
-    width:calc(100%+2em);
+    margin-right: 0%;
+    width:25em;
 
 
 }
@@ -245,6 +242,7 @@ height:400px;
 .box{
     background-color:#303030;
     box-shadow: var(--bs);
+    align-self:auto;
 }
 
 
@@ -253,9 +251,9 @@ height:400px;
 
 /*project style*/
 .card {
-    display: grid;
-    grid-template-columns: 300px;
-    grid-template-rows: 210px 210px ;
+    display:grid;
+    grid-template-columns:auto;
+    grid-template-rows:270px  150px ;
     grid-template-areas: "image" "text" ;
     border-radius: 18px;
     background: white;
@@ -263,35 +261,34 @@ height:400px;
     font-family: roboto;
     text-align: center;
     margin-left: auto;
+    margin:auto;
+
   }
-  .card-image {
+  .card-image1 {
     grid-area: image;
   }
   .card-text { 
     grid-area: text;
+text-overflow:inherit;
+text-size-adjust:auto ;
   }
-  .card-image {
-    grid-area: image;
-    background: url("./images/project2.jpeg");
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    background-size: cover;
-  }
+  
   .card-image1{ grid-area: image;
     background: url("./images/Screenshot\ \(350\).png");
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     background-size: cover;
+    background-position: center;
+    
+   
       
   }
- @media  screen {
-    
-}
+ 
  
   
 #project1{
     display: grid;
-  grid-template-columns:1fr 1fr 1fr;
+  grid-template-columns:1fr ;
   grid-template-rows: 1fr;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
@@ -316,25 +313,21 @@ height:400px;
     1px 5px 1px #919191,
     1px 1px 5px white,
     1px 2px 6px white;
-    padding-bottom:80px ;
+    padding-bottom: 20px;
     
 }
-.project{
-    display:flex;
-    align-items:center;
-justify-content:center;
-flex-direction:column;
 
-}
+
+
 .card:hover {
     transform: scale(1.15);
     box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
   }
   .card {
-
+align-self: center;
     transition: 0.5s ease;
     cursor: pointer;
-    margin:30px;
+    margin:20px;
   }
 
 
